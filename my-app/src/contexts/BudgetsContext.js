@@ -1,5 +1,5 @@
 import React from "react";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 //uuid a function we can call to create a brand new id
 import { v4 as uuidV4 } from "uuid";
 import useLocalStorage from "../hooks/useLocalStorage";
@@ -7,6 +7,7 @@ import useLocalStorage from "../hooks/useLocalStorage";
 //allows us to pass around information much easier (like we do with props)
 const BudgetsContext = React.createContext();
 
+export const UNCATEGORIZED_BUDGET_ID = "Uncategorized"
 export function useBudgets() {
   return useContext(BudgetsContext);
 }
