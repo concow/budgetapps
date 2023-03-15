@@ -33,7 +33,6 @@ export const BudgetsProvider = ({ children }) => {
     });
   }
   function deleteBudget({ id }) {
-    //TODO deal with uncategorized expenses
     setExpenses(prevExpenses => {
       return prevExpenses.map(expense => {
         if(expense.budgetId !== id) return expense
